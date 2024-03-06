@@ -1,13 +1,21 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Navbar from './components/Navbar/Navbar'
+import About from './components/Pages/About'
+import Projects from './components/Pages/Projects'
+import Contact from './components/Pages/Contact'
 
 function App() {
-
   return (
     <>
-      
+        <h1>coucou</h1>
+      <div className="App-container">
+        {/* <Navbar /> */}
+        <About />
+        <Projects/>
+        <Contact/>
+
+      </div>
     </>
   )
 }
