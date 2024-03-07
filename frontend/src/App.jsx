@@ -4,19 +4,19 @@ import Navbar from './components/Navbar/Navbar'
 import About from './components/Pages/About'
 import Projects from './components/Pages/Projects'
 import Contact from './components/Pages/Contact'
+import Music from './components/Pages/Music'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
-    <>
-        <h1>coucou</h1>
       <div className="App-container">
-        {/* <Navbar /> */}
+        <Navbar />
         <About />
         <Projects/>
+        <Music />
         <Contact/>
-
+        <Footer />
       </div>
-    </>
   )
 }
 
