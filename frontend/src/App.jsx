@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import About from './components/Pages/About'
@@ -9,14 +11,18 @@ import Footer from './components/Footer/Footer'
 
 function App() {
   return (
-      <div className="App-container">
+    <Router>
+      <div>
         <Navbar />
-        <About />
-        <Projects/>
-        <Music />
-        <Contact/>
+          <Routes>
+            <Route path="/" element={<About/>}/>
+            <Route path="/projects" element={<Projects/>}/>
+            <Route path="/music" element={<Music/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+          </Routes>
         <Footer />
       </div>
+    </Router>
   )
 }
 

@@ -1,0 +1,54 @@
+.navbar {
+    background-color: transparent; /* Couleur de fond transparente */
+    padding: 10px 0; /* Espacement intérieur en haut et en bas */
+    transition: background-color 0.3s; /* Transition pour un changement de couleur fluide */
+}
+
+.scrolled {
+    background-color: #fff; /* Couleur de fond lorsque la navbar est scrollée */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère lorsqu'elle est scrollée */
+    margin-left: 400px;  /* Pousse les liens à droite */
+
+}
+
+.navbar-brand img {
+    height: 40px; /* Taille de l'image du logo */
+    margin-right: 10px; /* Espacement entre le logo et les liens */
+}
+  
+.navbar-nav {
+    margin-left: auto; 
+     /* Pousse les liens à droite */
+}
+  
+.navbar-link {
+    color: #333; /* Couleur du texte des liens */
+    font-weight: bold;
+    margin: 0 15px; /* Espacement entre les liens */
+    text-transform: uppercase; /* Met en majuscules */
+    transition: color 0.3s; /* Transition pour un changement de couleur fluide */
+}
+  
+.navbar-link:hover {
+    color: #ffcc00; /* Couleur au survol */
+}
+  
+.social-icons img {
+    height: 25px; /* Taille des icônes sociales */
+    margin-right: 10px; /* Espacement entre les icônes */
+}
+  
+.vvd {
+    background-color: #ffcc00; /* Couleur de fond du bouton */
+    color: #333; /* Couleur du texte du bouton */
+    padding: 8px 20px; /* Espacement intérieur du bouton */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition pour un changement de couleur fluide */
+}
+  
+.vvd:hover {
+    background-color: #333; /* Couleur au survol du bouton */
+    color: #fff; /* Couleur du texte au survol */
+}
