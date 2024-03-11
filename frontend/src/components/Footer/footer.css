@@ -1,0 +1,18 @@
+/* footer.css */
+
+.footer-container {
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: #4aa08a; /* Couleur de fond du footer */
+    border-top: 2px solid #2c0404; /* Trait au-dessus du footer */
+    padding: 10px; /* Espacement interne du footer */
+    text-align: center; /* Centrer le texte */
+}
+
+.social-icons img {
+    height: 25px; /* Taille des icônes sociales */
+    margin-right: 10px; /* Espacement entre les icônes */
+}
