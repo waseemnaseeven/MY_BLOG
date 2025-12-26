@@ -1,12 +1,37 @@
+import { useState, useEffect } from "react";
 import { Header } from "./components/Header";
+import { NavigationTerminal } from "./components/NavigationTerminal";
 import { About } from "./components/About";
-import { Projects } from "./components/Projects";
+import { HomeLab } from "./components/HomeLab";
 import { Contact } from "./components/Contact";
+import { LoadingAnimation } from "./components/LoadingAnimation";
+import { SectionTransition } from "./components/SectionTransition";
 import { Toaster } from "./components/ui/sonner";
 
 export default function App() {
+  const [hasVisited, setHasVisited] = useState(false);
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const visited = localStorage.getItem('hasVisited');
+    if (visited) {
+      setHasVisited(true);
+      setShowContent(true);
+    }
+  }, []);
+
+  const handleLoadingComplete = () => {
+    setShowContent(true);
+    localStorage.setItem('hasVisited', 'true');
+    setHasVisited(true);
+  };
+
+  if (!hasVisited && !showContent) {
+    return <LoadingAnimation onComplete={handleLoadingComplete} />;
+  }
+
   return (
-    <div className="min-h-screen bg-[var(--dark-bg)] text-foreground relative overflow-x-hidden">
+    <div className="min-h-screen bg-black text-foreground relative overflow-x-hidden">
       {/* Cyberpunk background grid */}
       <div className="fixed inset-0 opacity-5 pointer-events-none">
         <div
@@ -30,7 +55,7 @@ export default function App() {
 
       {/* Vignette effect */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-[var(--dark-bg)]"></div>
+        <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black"></div>
       </div>
 
       {/* Main content */}
@@ -39,15 +64,17 @@ export default function App() {
 
         <main>
           <About />
-          <Projects />
+          <SectionTransition />
+          <HomeLab />
+          <SectionTransition />
           <Contact />
         </main>
 
         {/* Footer */}
-        <footer className="border-t border-[var(--neon-cyan)]/30 py-8 relative">
-          <div className="container mx-auto px-4">
+        <footer className="border-t border-[var(--neon-cyan)]/30 py-6 sm:py-8 relative">
+          <div className="container mx-auto px-4 sm:px-6">
             <div className="flex items-center justify-center">
-              <div className="font-mono text-sm text-muted-foreground">
+              <div className="font-mono text-xs sm:text-sm text-muted-foreground">
                 <span className="text-[var(--neon-cyan)]">&copy;</span> 2025 Waseem NASEEVEN
               </div>
             </div>
