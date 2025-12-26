@@ -306,7 +306,7 @@ export function Header() {
                       <div className="py-2">
                         {[
                           { name: "Malt", url: "https://www.malt.fr/profile/waseemnaseeven", color: "#FC5757" },
-                          { name: "Freework", url: "https://www.freework.com/profile/waseemnaseeven", color: "#00D9FF" },
+                          { name: "Freework", url: "https://www.free-work.com/en-gb/resume", color: "#00D9FF" },
                           { name: "Upwork", url: "https://www.upwork.com/freelancers/waseemnaseeven", color: "#14a800" },
                           { name: "Fiverr", url: "https://www.fiverr.com/waseemnaseeven", color: "#1dbf73" },
                         ].map((platform) => (
